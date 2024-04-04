@@ -1,0 +1,19 @@
+<input type="text" id="inpt">
+<button onclick="Add()">Add</button>
+<ul id="list-container">
+      <li>Hello
+            <button onclick="dlt(event)">Delete</button>
+      </li>
+</ul>
+<script>
+      let inpt=document.getElementById('inpt')
+      let ul=document.getElementById('list-container')
+      function Add(){
+            let listItem=document.createElement('li')
+            listItem.innerHTML=inpt.value + "<button onclick='dlt(event)'>Delete</button>" 
+            ul.append(listItem)
+      }
+      function dlt(e){
+          e.target.parentElement.remove()       
+      }
+</script>
